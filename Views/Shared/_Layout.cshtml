@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="~/css/General.css"/>
+    <script src="~/js/HeaderFooter.js"></script>
     <title>Home Page</title>
 </head>
 <body>
     <div id="page-wrapper">
     <header id="Header">
         <div class="Left">
-            Navbar Opener
+            <a asp-controller="Home" asp-action="Index">Booking</a>
         </div>
         <div class="Right">
-            Logo Side
+            <a asp-controller="Home" asp-action="Services">Services</a>
+            <a asp-controller="Home" asp-action="Gallery">Gallery</a>
+            <a asp-controller="Home" asp-action="About">About Us</a>
+            <a asp-controller="Home" asp-action="ContactUs">Contact Us</a>
         </div>
     </header>
         <nav class="navbar">
@@ -21,13 +26,13 @@
         </nav>
 
         <div class="Main-Wrapper">
-            <main>
+            <main id="MainContent">
                 @RenderBody()
             </main>
         </div>
 
         <footer id="Footer">
-        
+            Footer
         </footer>
     </div>
     @await RenderSectionAsync("Scripts", required: false)
