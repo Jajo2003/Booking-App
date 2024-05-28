@@ -14,7 +14,6 @@ header,footer
   background-color: black;
   color:#fff;
   padding: 1%;
-  
 }
 .Left
 {
@@ -36,8 +35,31 @@ header,footer
   flex:1;
   align-items: center;
   justify-content: end;
+  gap:5%;
 }
 
+.category-container
+{
+  padding: 9px 18px;
+  background-color: #fff;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+  will-change: transform;
+}
+
+.category-container a
+{
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+.category-container:hover
+{
+  transform: scale(1.1);
+}
 
 header
 {
@@ -51,3 +73,30 @@ header
 
 
 /* -----------HEADER---------- */
+
+/* -----------MAIN---------- */
+
+#MainContent
+{
+  min-height: 80vh;
+}
+
+
+
+/* -----------MAIN---------- */
+
+
+
+/* -----------FOOTER---------- */
+
+
+#Footer
+{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* -----------FOOTER---------- */

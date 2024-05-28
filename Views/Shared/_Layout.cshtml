@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="~/css/General.css"/>
     <script src="~/js/HeaderFooter.js"></script>
-    <title>Home Page</title>
+    <title>@ViewBag.Title</title>
 </head>
 <body>
     <div id="page-wrapper">
@@ -15,10 +15,18 @@
             <a asp-controller="Home" asp-action="Index">Booking</a>
         </div>
         <div class="Right">
-            <a asp-controller="Home" asp-action="Services">Services</a>
-            <a asp-controller="Home" asp-action="Gallery">Gallery</a>
-            <a asp-controller="Home" asp-action="About">About Us</a>
-            <a asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+            <div class="category-container">
+                <a asp-controller="Home" asp-action="Services">Services</a>
+            </div>
+            <div class="category-container">
+                <a asp-controller="Home" asp-action="Gallery">Gallery</a>
+            </div>
+            <div class="category-container">
+                <a asp-controller="Home" asp-action="About">About Us</a>
+            </div>
+            <div class="category-container">
+                <a asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+            </div>
         </div>
     </header>
         <nav class="navbar">
@@ -32,7 +40,12 @@
         </div>
 
         <footer id="Footer">
-            Footer
+            <div class="Left">
+                Left-Footer
+            </div>
+            <div class="Right">
+                Right-Footer
+            </div>
         </footer>
     </div>
     @await RenderSectionAsync("Scripts", required: false)
