@@ -3,24 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Home Page</title>
 </head>
 <body>
-    <header>
-
+    <div id="page-wrapper">
+    <header id="Header">
+        <div class="Left">
+            Navbar Opener
+        </div>
+        <div class="Right">
+            Logo Side
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <nav class="navbar">
 
-    <footer class="">
-       
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        </nav>
+
+        <div class="Main-Wrapper">
+            <main>
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer id="Footer">
+        
+        </footer>
+    </div>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
