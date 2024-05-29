@@ -36,6 +36,7 @@ header,footer
   align-items: center;
   justify-content: end;
   gap:5%;
+  height: inherit;
 }
 
 .category-container
@@ -96,6 +97,37 @@ header
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#Footer .Right
+{
+  gap:15%;
+}
+
+.Left-Footer
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#Footer .Right i
+{
+  font-size: 1.7em;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.fa-facebook:hover
+{
+  color:#1877F2;
+  transform: scale(1.1);
+}
+
+.fa-instagram:hover
+{
+  color:#E1306C;
+  transform: scale(1.1);
 }
 
 
