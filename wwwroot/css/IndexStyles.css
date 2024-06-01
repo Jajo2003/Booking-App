@@ -1,0 +1,44 @@
+.Carousel
+{
+  display: flex;
+  height:70vh;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  background-color: #000;
+}
+.carouselImg
+{
+  height: inherit;
+  width: 80%;
+}
+.Carousel i
+{
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+.rightCont, .leftCont
+{
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  width: 10%;
+  transition: 0.35s;
+  cursor: pointer;
+}
+.right,.left
+{  
+  width: auto;
+}
+
+.rightCont:hover , .leftCont:hover
+{
+  background-color: rgb(71, 69, 69);
+}
+
+
+
+

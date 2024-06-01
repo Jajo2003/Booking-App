@@ -79,6 +79,7 @@ header
 
 #MainContent
 {
+  margin: 3% 0; 
   min-height: 80vh;
 }
 
