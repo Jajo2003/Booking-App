@@ -8,7 +8,7 @@
   window.addEventListener('scroll',function(){
     let currentHeight = window.pageYOffset;
     let headerHeight = header.offsetHeight;
-    if(currentHeight>headerHeight)
+    if(currentHeight>headerHeight+10)
     {
       navOpts.forEach((navOpt) =>{
         navOpt.classList.add('fixedopts');
