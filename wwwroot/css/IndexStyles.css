@@ -10,13 +10,14 @@
 .carouselImg
 {
   height: inherit;
-  width: 80%;
+  width: 100%;
 }
 
 .visibleImg
 {
   transform: translateX(0);
   display: block;
+
 }
 
 .hiddenImg
@@ -33,6 +34,15 @@
   transform: translateY(-50%);
   font-size: 2em;
 }
+
+.midCont
+{
+  width: 80%;
+  height: inherit;
+  transition: 0.3s;
+  
+}
+
 .rightCont, .leftCont
 {
   display: flex;
