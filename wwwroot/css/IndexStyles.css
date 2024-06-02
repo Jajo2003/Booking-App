@@ -39,7 +39,7 @@
 {
   width: 80%;
   height: inherit;
-  transition: 0.3s;
+  transition: transform 0.5s ease;
 }
 
 .rightCont, .leftCont
@@ -51,7 +51,8 @@
   transition: 0.35s;
   cursor: pointer;
 }
-.right,.left
+.right,
+.left
 {  
   width: auto;
 }
