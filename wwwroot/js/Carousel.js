@@ -2,6 +2,30 @@
   var imgs = document.querySelectorAll(".carouselImg");
   var currentIndex = 0;
 
+  var header = document.getElementById("Header");
+  var navOpts = document.querySelectorAll(".opt");
+
+  window.addEventListener('scroll',function(){
+    let currentHeight = window.pageYOffset;
+    let headerHeight = header.offsetHeight;
+    if(currentHeight>headerHeight)
+    {
+      navOpts.forEach((navOpt) =>{
+        navOpt.classList.add('fixedopts');
+        navOpt.classList.remove('opt');
+      });
+      header.classList.add('fixedHeader');
+    }
+    else
+    {
+      header.classList.remove('fixedHeader');
+      navOpts.forEach((navOpt) =>{
+        navOpt.classList.remove('fixedopts');
+        navOpt.classList.add('opt');
+      });
+    }
+  });
+
   function showImage(index) 
   {
     imgs.forEach((img, i) => {

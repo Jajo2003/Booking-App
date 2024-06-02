@@ -15,6 +15,30 @@ header,footer
   color:#fff;
   padding: 1%;
 }
+
+.fixedHeader
+{
+  position: fixed;
+  color: #000;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  height: 8vh;
+}
+.fixedopts
+{
+  padding: 9px 18px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+  will-change: transform;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .Left
 {
   display: flex;
@@ -23,8 +47,8 @@ header,footer
 
 .Left a
 {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 2.2em;
+  font-weight: 700;
   text-decoration: none;
   color:inherit;
 }
@@ -34,12 +58,12 @@ header,footer
   display: flex;
   flex:1;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   gap:5%;
   height: inherit;
 }
 
-.Right a
+.opt
 {
   padding: 9px 18px;
   background-color: #fff;
@@ -50,7 +74,6 @@ header,footer
   will-change: transform;
   text-decoration: none;
   font-weight: 600;
-  color: #000;
 }
 .Right a:hover
 {
@@ -74,7 +97,7 @@ header
 
 #MainContent
 {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 
@@ -96,7 +119,9 @@ header
 
 #Footer .Right
 {
-  gap:15%;
+  gap:25%;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-container
@@ -142,11 +167,17 @@ header
   transform: scale(1.1);
 }
 
-.fa-instagram:hover
+.fa-envelope:hover
 {
   color:#E1306C;
   transform: scale(1.1);
 }
+.fa-linkedin:hover
+{
+  color:#0072b1;
+  transform: scale(1.1);
+}
+
 
 
 /* -----------FOOTER---------- */
