@@ -79,7 +79,6 @@ header
 
 #MainContent
 {
-  margin: 3% 0; 
   min-height: 80vh;
 }
 
@@ -103,6 +102,14 @@ header
 #Footer .Right
 {
   gap:15%;
+}
+
+.social-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
 }
 
 .Left-Footer

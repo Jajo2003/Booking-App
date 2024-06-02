@@ -12,6 +12,19 @@
   height: inherit;
   width: 80%;
 }
+
+.visibleImg
+{
+  transform: translateX(0);
+  display: block;
+}
+
+.hiddenImg
+{
+  transform: translateX(200%);
+  display: none;
+}
+
 .Carousel i
 {
   color: #fff;
