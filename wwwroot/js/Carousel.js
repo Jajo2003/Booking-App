@@ -47,7 +47,7 @@
             currentIndex++;
         }
         showImage(currentIndex);
-    }, 3000);
+    }, 5000);
 }
 
 loopedCarousel();
