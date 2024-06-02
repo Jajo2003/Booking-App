@@ -38,19 +38,19 @@
     showImage(currentIndex);
   });
   
-//   function loopedCarousel() 
-//   {
-//     setInterval(function() {
-//         if (currentIndex === imgs.length - 1) {
-//             currentIndex = 0;
-//         } else {
-//             currentIndex++;
-//         }
-//         showImage(currentIndex);
-//     }, 3000);
-// }
+  function loopedCarousel() 
+  {
+    setInterval(function() {
+        if (currentIndex === imgs.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+        showImage(currentIndex);
+    }, 3000);
+}
 
-// loopedCarousel();
+loopedCarousel();
 
 
 });

@@ -1,33 +1,32 @@
-.Carousel
-{
+.Carousel {
   display: flex;
-  height:70vh;
+  height: 70vh;
   position: relative;
   width: 100%;
   justify-content: center;
   background-color: #000;
 }
-.carouselImg
-{
+
+.carouselImg {
   height: inherit;
   width: 100%;
+  position: absolute;
+  transition: opacity 0.5s ease;
 }
 
-.visibleImg
-{
-  transform: translateX(0);
-  display: block;
-
+.visibleImg {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
-.hiddenImg
-{
-  transform: translateX(200%);
-  display: none;
+.hiddenImg {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
 }
 
-.Carousel i
-{
+.Carousel i {
   color: #fff;
   font-weight: 700;
   position: absolute;
@@ -35,33 +34,25 @@
   font-size: 2em;
 }
 
-.midCont
-{
+.midCont {
   width: 80%;
   height: inherit;
-  transition: transform 0.5s ease;
+  position: relative;
 }
 
-.rightCont, .leftCont
-{
+.rightCont, .leftCont {
   display: flex;
-  place-items: center;
+  align-items: center;
   justify-content: center;
   width: 10%;
-  transition: 0.35s;
   cursor: pointer;
 }
-.right,
-.left
-{  
+
+.right, .left {
   width: auto;
 }
 
-.rightCont:hover , .leftCont:hover
+.rightCont:hover, .leftCont:hover 
 {
   background-color: rgb(71, 69, 69);
 }
-
-
-
-
