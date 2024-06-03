@@ -57,3 +57,98 @@
 {
   background-color: rgb(71, 69, 69);
 }
+
+.popularRooms
+{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3%;
+  padding: 0 2%;
+}
+.gotoRooms
+{
+  color:#000;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition:0.25s;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.gotoRooms:hover
+{
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.roomContainer
+{
+  width: 100%;
+  height: 80%;
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.roomContainer .topImg
+{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.RoomInfo
+{
+  display: flex;
+  color: #fff;
+  width: 100%;
+  flex-direction: column;
+}
+.roomStat
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding: 3%;
+}
+
+.btnCont
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  
+}
+
+.statName
+{
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.BookRoom
+{
+  width: 90%;
+  height: 4vh;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: 0.25s;
+}
+
+.BookRoom:hover
+{
+  background-color: rgb(104, 95, 95);
+  color:#fff;
+}
