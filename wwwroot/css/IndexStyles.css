@@ -46,6 +46,7 @@
   justify-content: center;
   width: 10%;
   cursor: pointer;
+  transition: 0.25s;
 }
 
 .right, .left {
