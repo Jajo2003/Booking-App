@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     fetchRooms().then(rooms => {
       let popularRooms = document.querySelector('.popularRooms');
-      console.log(rooms);
+
       for (let i = 0; i < 3; i++) {
         let room = rooms[i];
         
@@ -97,11 +97,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
-  let headerHeight = document.getElementById('Header').offsetHeight;
+  let carouselHeight = document.querySelector('.Carousel').offsetHeight;
   let roomsLoaded = false;
   document.addEventListener('scroll',function(){
-  if((window.scrollY > headerHeight && !roomsLoaded))
+  if((window.scrollY > carouselHeight && !roomsLoaded))
   {
+    console.log(carouselHeight);
+    console.log(window.scrollY);
     getRooms();
     roomsLoaded=true;
   }
