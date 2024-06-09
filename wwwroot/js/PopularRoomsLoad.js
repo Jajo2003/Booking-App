@@ -12,40 +12,49 @@ document.addEventListener("DOMContentLoaded", function() {
         throw error; // Re-throw the error so that the calling code knows the fetch failed
       });
   }
-  fetchRooms().then(rooms =>{
+
+  fetchRooms().then(rooms => {
     let popularRooms = document.querySelector('.popularRooms');
     console.log(rooms);
-    for(let i=0;i<2;i++)
-      {
-        let container = document.createElement('div');
-        container.classList.add('roomContainer');
-        let image = document.createElement('img');
-        image.classList.add('topImg');
-        let roomInfo = document.createElement('div');
-        roomInfo.classList.add('RoomInfo');
-        let priceCont = document.createElement('div');
-        priceCont.classList.add('roomStat');
-        let roomNumber = document.createElement('div');
-        roomNumber.classList.add('roomStat');
-        let floorNumber = document.createElement('div');
-        floorNumber.classList.add('roomStat');
-        let available = document.createElement('div');
-        available.classList.add('roomStat');
+    for (let i = 0; i < 2; i++) {
+      let room = rooms[i];
+      
+      let container = document.createElement('div');
+      container.classList.add('roomContainer');
+      
+      // Image
+      let image = document.createElement('img');
+      image.src = `http://localhost:5086/api/rooms/image/${room.roomPic}`;
+      image.classList.add('topImg');
+      
+      // Room Info
+      let roomInfo = document.createElement('div');
+      roomInfo.classList.add('RoomInfo');
+      
+      let priceCont = document.createElement('div');
+      priceCont.classList.add('roomStat');
+      priceCont.textContent = `Price: ${room.price}`;
+      
+      let roomNumber = document.createElement('div');
+      roomNumber.classList.add('roomStat');
+      roomNumber.textContent = `Room Number: ${room.roomNumber}`;
+      
+      let floorNumber = document.createElement('div');
+      floorNumber.classList.add('roomStat');
+      floorNumber.textContent = `Floor Number: ${room.floorNumber}`;
+      
+      let available = document.createElement('div');
+      available.classList.add('roomStat');
+      available.textContent = `Available: ${room.isAvailable}`;
 
-        
+      roomInfo.appendChild(priceCont);
+      roomInfo.appendChild(roomNumber);
+      roomInfo.appendChild(floorNumber);
+      roomInfo.appendChild(available);
 
-
-
-        roomInfo.appendChild(priceCont);
-        roomInfo.appendChild(roomNumber);
-        roomInfo.appendChild(floorNumber);
-        roomInfo.appendChild(available);
-
-        
-        container.appendChild(image);
-        container.appendChild(roomInfo);
-        popularRooms.appendChild(container);
-      }
+      container.appendChild(image);
+      container.appendChild(roomInfo);
+      popularRooms.appendChild(container);
+    }
   });
-
 });
