@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  function getRooms()
-  {
+  function getRooms() {
     function fetchRooms() {
       return fetch('http://localhost:5086/api/rooms')
         .then(response => {
@@ -32,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Room Info
         let roomInfo = document.createElement('div');
         roomInfo.classList.add('RoomInfo');
-        //RoomPrice
 
+        // Room Price
         let priceCont = document.createElement('div');
         priceCont.classList.add('roomStat');
         let priceHeader = document.createElement('div');
@@ -44,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
         priceValue.textContent = rooms[i].price;
         priceCont.appendChild(priceHeader);
         priceCont.appendChild(priceValue);
-        //RoomNumber
+
+        // Room Number
         let roomCont = document.createElement('div');
         roomCont.classList.add('roomStat');
         let roomHeader = document.createElement('div');
@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
         roomValue.textContent = rooms[i].roomNumber;
         roomCont.appendChild(roomHeader);
         roomCont.appendChild(roomValue);
-        //FloorNumber
+
+        // Floor Number
         let floorCont = document.createElement('div');
         floorCont.classList.add('roomStat');
         let floorHeader = document.createElement('div');
@@ -67,24 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
         floorCont.appendChild(floorHeader);
         floorCont.appendChild(floorValue);
 
-        //Button
+        // Button
         let buttonCont = document.createElement('div');
         buttonCont.classList.add('btnCont');
         let button = document.createElement('button');
         button.classList.add('BookRoom');
-        
+        button.textContent = rooms[i].isAvailable ? "Book For Today" : "Not Available";
         buttonCont.appendChild(button);
-
-        if(rooms[i].isAvailable)
-        {
-          button.textContent = "Book For Today";
-        }
-        else
-        {
-          button.textContent = "Not Available";
-        }
-        
-
 
         roomInfo.appendChild(priceCont);
         roomInfo.appendChild(roomCont);
@@ -94,18 +84,17 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(roomInfo);
         popularRooms.appendChild(container);
       }
+
     });
   }
-  
-  let carouselHeight = document.querySelector('.Carousel').offsetHeight;
+
+  let carouselHeight = document.querySelector('.Carousel');
   let roomsLoaded = false;
-  document.addEventListener('scroll',function(){
-  if((window.scrollY > carouselHeight/2 && !roomsLoaded))
-  {
-    console.log(carouselHeight);
-    console.log(window.scrollY);
-    getRooms();
-    roomsLoaded=true;
-  }
-  })
+  document.addEventListener('scroll', function() {
+    if ((window.scrollY > carouselHeight.offsetHeight / 2 && !roomsLoaded)) {
+      getRooms();
+      document.querySelector('.popularRooms').classList.add('scrollImageUp');
+      roomsLoaded = true;
+    }
+  });
 });
