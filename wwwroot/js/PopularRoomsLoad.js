@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let carouselHeight = document.querySelector('.Carousel').offsetHeight;
   let roomsLoaded = false;
   document.addEventListener('scroll',function(){
-  if((window.scrollY > carouselHeight && !roomsLoaded))
+  if((window.scrollY > carouselHeight/2 && !roomsLoaded))
   {
     console.log(carouselHeight);
     console.log(window.scrollY);

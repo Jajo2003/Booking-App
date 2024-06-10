@@ -93,7 +93,7 @@
   background-color: #000;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  
+  animation: loadedImage 2s ease-in-out forwards;
 }
 
 .roomContainer .topImg
@@ -151,4 +151,16 @@
 {
   background-color: rgb(104, 95, 95);
   color:#fff;
+}
+
+@keyframes loadedImage
+{
+  0%
+  {
+    translate:translateY(-200%);
+  }
+  100%
+  {
+    translate: translateY(0);
+  }
 }
