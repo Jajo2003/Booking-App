@@ -54,7 +54,7 @@ header,footer
   color:inherit;
 }
 
-.Right 
+.Middle
 {
   display: flex;
   flex:1;
@@ -76,7 +76,32 @@ header,footer
   text-decoration: none;
   font-weight: 600;
 }
-.Right a:hover
+.Middle a:hover
+{
+  transform: scale(1.1);
+}
+
+.Right 
+{
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: end;
+  margin-right: 2%;
+  height: inherit;
+}
+.sign-in
+{
+  width: 30%;
+  height: 40%;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1em;
+  font-weight: 700;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.sign-in:hover
 {
   transform: scale(1.1);
 }
@@ -86,7 +111,7 @@ header
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 
