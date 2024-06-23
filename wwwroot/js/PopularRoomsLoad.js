@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let carouselHeight = document.querySelector('.Carousel');
   let roomsLoaded = false;
   document.addEventListener('scroll', function() {
-    if ((window.scrollY > carouselHeight.offsetHeight / 2 && !roomsLoaded)) {
+    if ((window.scrollY > carouselHeight.offsetHeight && !roomsLoaded)) {
       getRooms();
       document.querySelector('.popularRooms').classList.add('scrollImageUp');
       roomsLoaded = true;
