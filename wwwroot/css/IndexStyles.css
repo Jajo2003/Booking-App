@@ -69,6 +69,14 @@
   padding: 0 2%;
   overflow: hidden;
 }
+
+.gotoRoomsCont
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .gotoRooms
 {
   color:#000;
